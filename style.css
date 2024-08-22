@@ -31,42 +31,38 @@ input{
     cursor: text;
 }
 body{
-    background-color: #F0F0F0;
+    background-color: #ffffff;
     font-family: NeueMachina , "Poppins" , system-ui;
 }
+
+
+
 /* ------- HEADER ------- */
 header{
-    width: 85%;
+    width: 100%;
     height: 52px;
-    margin: 32px auto;
-    display: grid;
-    grid-template-columns: repeat(2 , auto);
-    justify-content: space-between;
+    padding: 50px 5%;
+    display: flex;
     align-items: center;
     position: absolute;
-    left: 0; 
-    right: 0; 
-    
+    top: 0;
+    left: 0;
 }
 nav{
     display: flex;
     align-items: center;
+    margin-right: auto;
 }
 nav img{
     width: 52px;
 }
 nav ul {
-    margin: 0 15px;
     list-style: none;
     display: flex;
+    align-items: center;
 }
 nav li{
-    width: Hug (151px)px;
-    height: Hug (52px)px;
-    padding: 14px 20px 14px 20px;
-    gap: 10px;
-    opacity: 0px;
-    
+    padding: 14px 20px ;
 }
 nav a{
     text-decoration: none;
@@ -74,7 +70,6 @@ nav a{
     font-size: 18px;
     font-weight: 400;
     position: relative;
-    padding-bottom: 5px;    
 }
 nav a::before{
     content: '';
@@ -90,13 +85,8 @@ nav a::before{
 nav a:hover::before{
     width: 100%;
 }
-
 header button{
-    width: Hug (91px)px;
-    height: Hug (52px)px;
     padding: 14px 20px ;
-    gap: 10px;
-    opacity: 0px;
     border: none;
     cursor: pointer;
     border: 1px solid black;
@@ -123,34 +113,32 @@ header div img{
 
 /* ------- CTA ------- */
 .cta{
-    width: 90%;
+    width: 100%;
     height: 100vh;
-    margin: auto;
+    padding: 5%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    gap: 20px;
-    padding: 0 25px;
+}
+.cta .right-con{
+    max-width: 50%;
 }
 
-.cta h3{
-    width: 750px;
+.cta .right-con h3{
     font-size: 70px;
     font-weight: 400;
     line-height: 80px;
     letter-spacing: -4px;
     margin-bottom: 40px;
 }
-.cta p{
-    width: 565px;
+.cta .right-con p{
     font-size: 18px;
     font-weight: 400;
     line-height: 26px;
 }
-.catbtn{
+.cta .right-con .catbtn{
     margin: 50px 0;
 }
-.catbtn input{
+.cta .right-con .catbtn input{
     width: 361px;
     height: 52px;
     color: #151515;
@@ -164,7 +152,7 @@ header div img{
     border: 1px solid;
     border-image: linear-gradient(to right, #000 10%, transparent 20%) 20% 1;
 }
-.catbtn button{
+.cta .right-con .catbtn button{
     width: 144px;
     height: 52px;
     color: #FFFFFF;
@@ -178,19 +166,35 @@ header div img{
     cursor: pointer;
     
 }
-
+.cta .left-con {
+    width: 50%;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cta .left-con img {
+    width: 90%;
+}
 
 /* ------- ABOUT US ------- */
 
 .aboutus , .howitworks , .pricing , .faqs{
-    width: 90%;
-    height: 588px;
-    margin: 0 auto 250px auto;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    gap: 50px;
-    padding: 0 25px;
+    justify-content: space-between;
+    padding: 30px 5%;
+
+}
+.aboutus .left-con {
+    width: 50%;
+}
+.aboutus .left-con img{
+    width: 90%;
+}
+.aboutus .right-con {
+    max-width: 50%;
 }
 .aboutus button , .howitworks button, .pricing button , .faqs button{
     padding: 6px 20px;
@@ -201,8 +205,6 @@ header div img{
     
 }
 .aboutus h3, .howitworks h3{
-    width: 750px;
-    height: 116px;
     font-size: 60px;
     font-weight: 400;
     line-height: 57.9px;
@@ -210,8 +212,6 @@ header div img{
     margin: 30px 0;
 }
 .aboutus p{
-    width: 712px;
-    height: 78px;
     color: #151515;
     font-size: 18px;
     font-weight: 400;
@@ -227,8 +227,16 @@ header div img{
 }
 
 /* ------- HOW IT WORKS  ------- */
-.howitworks{
-    height: 861px;
+.howitworks .right-con {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+.howitworks .right-con img{
+    width: 90%;
+}
+.howitworks .left-con {
+    max-width: 50%;
 }
 .howitworks h3{
     margin: 50px 0;
@@ -248,16 +256,15 @@ header div img{
     margin-bottom: 10px;
 }
 .howitworks .icons p{
-    width: 499px;
-    height: 78px;
     font-size: 18px;
     font-weight: 400;
     line-height: 26px;
 }
 
+
 /* ------- PRICING ------- */
+
 .pricing{
-    height: 1204px;
     display: block;
 }
 .pricing-top{
@@ -287,16 +294,15 @@ header div img{
     margin-top: 100px;
 }
 .cards{
-    width: 400px;
+    max-width: 50%;
     height: 644px;
     text-align: center;
     border: 1px solid #151515;
-    padding: 30px ;
+    padding: 5% ;
     padding-bottom: 0;
     position: relative;
 }
 .cards h2{
-    height: 77px;
     font-size: 80px;
     font-weight: 800;
     line-height: 77.2px;
@@ -317,22 +323,10 @@ span{
     font-size: 20px;
     
 }
-/* .cards h2::after{
-    content: 'per month';
-    position: absolute;
-    bottom: -15px;
-    right: -105px;
-    font-size: 18px;
-    font-weight: 800;   
-    line-height: 28px;
-    text-align: left;
-} */
 .cards p {
-    width: 323px;
-    height: 28px;
     font-size: 15px;
     font-weight: 400;    
-    margin: 20px 0 60px 0;
+    margin: 20px 0 60px ;
     
 }
 .cards ul{
@@ -346,7 +340,7 @@ span{
     line-height: 42px;
 }
 .cards button{
-    width: 320px;
+    width: 80%;
     height: 52px;
     background-color: #151515;
     color: #FFFFFF;
@@ -369,12 +363,22 @@ span{
     border-image: linear-gradient(to bottom, #000 0%, transparent 10%) 40% 1;
 }
 
-
-
 /* ------- FAQs ------- */
+
+.faqs .right-con {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+.faqs .right-con img{
+    width: 70%;
+}
+.faqs .left-con {
+    max-width: 50%;
+}
+
+
 .faqs h2{
-    width: 554px;
-    height: 58px;
     font-size: 60px;
     font-weight: 400;
     line-height: 57.9px;
@@ -383,19 +387,15 @@ span{
     margin-bottom: 20px;
 }
 .faqs p{
-    width: 532px;
-    height: 78px;
     font-size: 18px;
     font-weight: 400;
     line-height: 26px;
 }
 .faqs .faqs-contanier{
     margin-top: 61px;
-    width:840px;
-    height: 126px;
+
 }
 .faqs-contanier h3{
-    height: 28px;
     font-size: 20px;
     font-weight: 800;
     line-height: 28px;
@@ -410,15 +410,14 @@ span{
     top: 0;
 }
 .faqs-contanier p{
-    width: 764px;
-    height: 78px;
+
     font-size: 18px;
     font-weight: 400;
     line-height: 26px;        
     margin-bottom: 20px;
 }
 .faqs-contanier h4{
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 800;
     line-height: 28px;
     border-top: 1px solid #151515;
@@ -430,10 +429,8 @@ span{
     font-size: 20px;
     position: absolute;
     right: 0;
-    top: 0;
-}
-.faqs img{
-    margin-bottom: -350px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 
@@ -441,85 +438,84 @@ span{
 /* ------- FOOTER ------- */
 footer{
     width: 100%;
-    height: 560px;
     padding: 34px 80px;
     background-color: #151515;
     display: flex;
     justify-content: space-between;
 }
-.footer-rig{
-    width: 484px;
-    height: 477px;
-}
-.footer-rig h3{
-    width: 444px;
-    height: 120px;
-    font-size: 52px;
-    font-weight: 400;
-    line-height: 60px;
-    letter-spacing: -4px;
+.footer-left{
     text-align: left;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.footer-left img{
+    width: 5%;
+}
+.footer-left h3{
+    font-size: 35px;
+    font-weight: 400;
     color: #FFFFFF;
     margin-top: 40px;
     margin-bottom: 32px;
 }
-.footer-rig div{
+.footer-left div{
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 155px;
 }
-.footer-rig button{
+.footer-left button{
     border: 1px solid #FFFFFF;
     color: #FFFFFF;
     background-color: #151515;
     cursor: pointer;
     padding: 17px 20px;
 }
-.footer-rig input{
+.footer-left input{
     width: 361px;
     height: 52px;
     padding: 14px 193px 14px 16px;
 }
-.footer-rig input:focus{
+.footer-left input:focus{
     outline: none;
     border-bottom:none;
 }
-.footer-rig h4{
+.footer-left h4{
     color: #FFFFFF;
     font-size: 18px;
     font-weight: 400;
     text-align: left;
 }
 
-.footer-lef{
-    width: 696px;
-    height: 496px;
+.footer-right{
+    width: 50%;
     display: flex;
     justify-content: space-between;
     align-items: start;
     color: #FFFFFF;
     position: relative;
 }
-.footer-lef h4{
+.footer-right h4{
     font-size: 20px;
     font-weight: 800;
     line-height: 28px;
     margin-bottom: 24px;
 }
-.footer-lef ul{
+.footer-right ul{
     list-style: none;
 }
-.footer-lef li{
+.footer-right li{
     line-height: 30px;
 }
-.footer-lef a{
+.footer-right a{
     text-decoration: none;
     color: #FFFFFF;
     font-size: 18px;
     font-weight: 400;
 }
-.footer-lef img{
+.footer-right img{
     position: absolute;
     right: 80px;
     bottom: 32px;
